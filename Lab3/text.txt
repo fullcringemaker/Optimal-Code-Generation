@@ -1,0 +1,16 @@
+begin
+    a = 12
+    b = 4
+    result = a - b
+
+    if result > 6 then
+        result = result + 2
+    endif
+
+    while b > 0 do
+        result = result + b
+        b = b - 1
+    endwhile
+
+    return result
+end
