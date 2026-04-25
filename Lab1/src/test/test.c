@@ -1,48 +1,33 @@
-#include <stdio.h>
+struct Point {
+    int x;
+    int y;
+};
 
-void use(int x) { (void)x; }
+int main(int *p, int n, int k) {
+    int a[4];
+    int x;
+    int i;
 
-void functionA(int n);
+    struct Point pt;
 
-void functionB(int n);
+    a[0] = 10;
+    a[1] = 20;
+    a[2] = 30;
+    a[3] = 40;
 
-void functionC(int n);
+    pt.x = 5;
+    pt.y = 7;
 
-void functionA(int n) {
-    if (n > 0) {
-        functionB(n - 1);
+    if (n > 0)
+        x = a[k] + pt.x;
+    else
+        x = *p - pt.y;
+
+    i = 0;
+    while (i < 3) {
+        x = x + a[i];
+        i = i + 1;
     }
-}
 
-void functionB(int n) {
-    if (n > 0) {
-        functionC(n - 1);
-    }
-}
-
-void functionC(int n) {
-    if (n > 0) {
-        functionA(n - 1);
-    }
-}
-
-int main() {
-  int arr[3];
-  arr[0] = 1;
-  arr[2] = 14;
-    functionA(3);
-    int y = 1;
-    if (y) {
-        y = 5;
-    } else {
-        y = 9;
-    }
-  use(y);
-
-  int val = 42;
-  int *ptr = &val;
-  *ptr = 100;
-  use(*ptr);
-
-  return 0;
+    return x;
 }
