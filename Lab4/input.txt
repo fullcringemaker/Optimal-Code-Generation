@@ -1,0 +1,19 @@
+main {
+    a = 212
+    b = 313
+    c = a + b
+    if (c){
+        t = a
+        a = a + 414
+    }
+    else{
+        t = b
+        b = a + 515
+    }
+    if(c){
+        t = c
+        c = c + 616
+    }
+    c = a + b
+    return c
+}
