@@ -1,0 +1,43 @@
+digraph g{
+	node [shape = box]
+	0[label="
+	"]
+	0->1
+	1[label="
+		a0 = 212
+		b0 = 313
+		c0 = a0 + b0
+		i_cmp_ne_0 c0
+	"]
+	1->2
+	1->4
+	2[label="
+		t0 = a0
+		a1 = a0 + 414
+	"]
+	2->3
+	3[label="
+		t1= phi (t0, t4)
+		b1= phi (b0, b2)
+		a2= phi (a1, a0)
+		i_cmp_ne_0 c0
+	"]
+	3->5
+	3->6
+	4[label="
+		t4 = b0
+		b2 = a0 + 515
+	"]
+	4->3
+	5[label="
+		t2 = c0
+		c1 = c0 + 616
+	"]
+	5->6
+	6[label="
+		t3= phi (t2, t1)
+		c2= phi (c1, c0)
+		c3 = a2 + b1
+		return c3
+	"]
+}
